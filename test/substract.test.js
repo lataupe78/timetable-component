@@ -1,0 +1,6 @@
+import { subtract } from '@/js/substract.js';
+
+test('subtract 2 - 1 to equal 1', () => {
+  expect(subtract(2, 1)).toBe(1);
+});
+

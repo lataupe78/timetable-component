@@ -1,0 +1,77 @@
+.timetable__container {
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem 2rem 2rem;
+
+  .timetable__header {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .timetable__status {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+
+    span.is-open {
+      font-weight: bold;
+      color: green;
+      margin-inline-end: 0.5rem;
+    }
+    span.is-closed {
+      font-weight: bold;
+      color: red;
+      margin-inline-end: 0.5rem;
+    }
+  }
+
+  table.timetable__table {
+    display: table;
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+
+    max-width: 400px;
+    border: 2px solid #888;
+
+    caption {
+      margin-bottom: 1rem;
+
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    tr:not(:last-child) {
+      border-bottom: 1px solid #444;
+    }
+
+    td {
+      text-align: start;
+
+      vertical-align: top;
+      padding: 0.25rem 0.5rem 0.5rem;
+
+      &:first-letter {
+        text-transform: uppercase;
+      }
+
+      &.label__day {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      &.label__hours {
+        font-size: .8rem;
+        font-weight: 400;
+
+      }
+    }
+  }
+
+  .timetable__hour_range {
+    display: block;
+
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "timetable-vite",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "js:esmbuild": "set \"BABEL_ENV=esm\" && rollup --config",
+    "js:iifebuild": "set \"BABEL_ENV=iife\" && rollup --config",
+    "js:build": "npm run js:esmbuild && npm run js:iifebuild",
+    "js:watch": "set \"BABEL_ENV=esm\" && rollup --config --watch",
+ 
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^23.0.3",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "rollup": "^2.79.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.56.1",
+    "vite": "^3.2.3",
+    "vitest": "^0.25.3"
+  }
+}
